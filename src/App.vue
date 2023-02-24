@@ -4,7 +4,16 @@
     <router-link to="/about">About</router-link>
   </nav>
   <router-view/>
+<el-button>我是 ElButton</el-button>
 </template>
+
+<script>
+import { ElButton } from 'element-plus'
+import 'element-plus/dist/index.css'
+export default {
+  components: { ElButton }
+}
+</script>
 
 <style lang="scss">
 #app {
