@@ -1,12 +1,19 @@
 <template>
-    <PageHeader/>
+  <PageHeader v-bind:avatar="avatar" />
 </template>
 
 <script>
 import PageHeader from '@/modules/PageHeader.vue'
+import { reactive, toRefs } from 'vue'
 
 export default {
-  components: { PageHeader }
+  components: { PageHeader },
+  setup () {
+    const avatar = reactive({ avatar: 'https://cube.elemecdn.com/0/88/03b0d39583f48206768a7534e55bcpng.png' })
+    return {
+      ...toRefs(avatar)
+    }
+  }
 }
 console.log('LS')
 </script>
