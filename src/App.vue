@@ -1,18 +1,14 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
-<el-button>我是 ElButton</el-button>
+    <PageHeader/>
 </template>
 
 <script>
-import { ElButton } from 'element-plus'
-import 'element-plus/dist/index.css'
+import PageHeader from '@/modules/PageHeader.vue'
+
 export default {
-  components: { ElButton }
+  components: { PageHeader }
 }
+console.log('LS')
 </script>
 
 <style lang="scss">
@@ -35,5 +31,14 @@ nav {
       color: #42b983;
     }
   }
+}
+
+.title {
+  font-size: 23px;
+}
+
+.flex-grow,
+.grow {
+  flex-grow: 1;
 }
 </style>
